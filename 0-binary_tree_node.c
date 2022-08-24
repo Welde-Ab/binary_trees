@@ -1,3 +1,4 @@
+#include <stdlib.h>
 #include "binary_trees.h"
 
 /**
@@ -11,13 +12,13 @@
 
 binary_tree_t *binary_tree_node(binary_tree_t *parent, int value)
 {
-binary_tree_t *temp = malloc(sizeof(binary_tree_t));
-if (temp != NULL)
+binary_tree_t *node = malloc(sizeof(binary_tree_t));
+if (node != NULL)
 {
-temp->value = value;
-temp->parent = parent;
-temp->left = temp->right = NULL;
-return (temp);
+node->n = value;
+node->parent = parent;
+node->left = node->right = NULL;
+return (node);
 }
 
 else
